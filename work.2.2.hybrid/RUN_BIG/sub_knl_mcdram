@@ -1,0 +1,10 @@
+#MSUB -N 1
+#MSUB -x
+#MSUB -q knl
+cd $HOME/XPN/work.2.2.hybrid/RUN_BIG/
+export KMP_AFFINITY=granularity=fine,compact,1
+for i in 1 2 4 6 8 16 32 64;do
+export OMP_NUM_THREADS=$i
+ccc_mprun -n 1 -c ${OMP_NUM_THREADS} numactl --preferred 1  ../Xpn_knl |tee  run_knl_mcdram_n1_c${OMP_NUM_THREADS}
+done
+

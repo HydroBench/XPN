@@ -1,0 +1,16 @@
+OBJ = module_don.o module_subr.o  prog_pn.o CALCUL.o  
+Xpn : $(OBJ)
+	mpif90  -g -xCORE-AVX2 -extend-source 132 -O3 -o Xpn_hsw $(OBJ)	-qopenmp
+
+			
+module_don.o : module_don.f
+	mpif90  -g  -xCORE-AVX2 -extend-source 132  -O3 -c module_don.f
+
+module_subr.o : module_subr.f
+	mpif90  -g -xCORE-AVX2 -extend-source 132 -O3 -c module_subr.f
+
+prog_pn.o : prog_pn.f
+	mpif90  -g -xCORE-AVX2  -extend-source 132  -O3 -c prog_pn.f
+
+CALCUL.o : CALCUL.F90
+	mpif90 -g -xCORE-AVX2   -DOPENMP  -extend-source 132  -O3 -c CALCUL.F90 -qopenmp

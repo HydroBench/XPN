@@ -1,0 +1,10 @@
+base   12
+base_m 12
+          48 configurations a 2 qp proton/neutron
+    48config protons/neutron  pour un Kspin   0 parite  1
+pour un cut de  10.00000000
+fin lecture exin date:20160428   time:162026.615
+ MATRICE A +B : new central+coul+dens+SO
+calcul avec   1 processeurs
+A B debut boucle ij1 ij2 date:20160428   time:162030.379
+ NJOB proton proton        1176

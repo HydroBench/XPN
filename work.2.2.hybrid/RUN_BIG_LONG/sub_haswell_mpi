@@ -1,0 +1,10 @@
+#MSUB -n 64 
+#MSUB -c 4
+#MSUB -x
+#MSUB -q haswell
+cd $HOME/XPN/work.2.2.hybrid/RUN_BIG_LONG/
+for i in  1 2 4 8 16 32 64 ;do
+export OMP_NUM_THREADS=1
+ccc_mprun -n $i -c 4  ../Xpn_hsw |tee  HASWELL/run_n_mpi$i
+done
+

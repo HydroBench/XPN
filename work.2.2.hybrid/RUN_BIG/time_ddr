@@ -1,0 +1,11 @@
+grep                                                                                                                                              
+grep total run_knl*                                                                                                                                                              
+run_knl_n1_c1:**** Duree totale :      214.940 seconds ****
+run_knl_n1_c16:**** Duree totale :      100.718 seconds ****
+run_knl_n1_c2:**** Duree totale :      155.829 seconds ****
+run_knl_n1_c32:**** Duree totale :       97.334 seconds ****
+run_knl_n1_c4:**** Duree totale :      124.014 seconds ****
+run_knl_n1_c6:**** Duree totale :      112.927 seconds ****
+run_knl_n1_c64:**** Duree totale :       94.259 seconds ****
+run_knl_n1_c8:**** Duree totale :      108.412 seconds ****
+

@@ -1,0 +1,13 @@
+#MSUB -N 1
+#MSUB -x
+#MSUB -q haswell
+cd $HOME/XPN/work.2.2.hybrid/RUN_BIG_LONG/
+export KMP_AFFINITY=granularity=fine,compact,1
+for i in 1 2 4 6 8 16 32;do
+export OMP_NUM_THREADS=$i
+ccc_mprun -n 1 -c ${OMP_NUM_THREADS} ../Xpn_hsw |tee  HASWELL/run_n1_c${OMP_NUM_THREADS}
+done
+export KMP_AFFINITY=granularity=fine,compact
+export OMP_NUM_THREADS=64
+ccc_mprun -n 1 -c 32  ../Xpn_hsw |tee  HASWELL/run_n1_c${OMP_NUM_THREADS}
+

@@ -1,0 +1,13 @@
+base   16
+base_m 16
+          18 configurations a 2 qp proton/neutron
+    18config protons/neutron  pour un Kspin   0 parite  1
+pour un cut de   7.00000000
+fin lecture exin date:20160511   time:095304.068
+ MATRICE A +B : new central+coul+dens+SO
+calcul avec   1 processeurs
+A B debut boucle ij1 ij2 date:20160511   time:095434.869
+ NJOB proton proton         171
+ A B fin boucle par ij1 ij2 date:20160511   time:095438.490
+FIN DE CALCUL MATRICE date:20160511   time:095438.504
+FIN DE SAUVEGARDE DANS fort.440  date:20160511   time:095438.515
